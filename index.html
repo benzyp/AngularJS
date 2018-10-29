@@ -1,0 +1,45 @@
+<html ng-app="myApp">
+    <head>
+        <!-- <base href="/"> -->
+        <title>States Statistics</title>
+        <!-- load bootstrap and font awesome via CDN -->
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+        <!-- load angular via CDN -->
+        <script src="https://code.angularjs.org/1.3.0-rc.1/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.3.0-rc.1/angular-messages.min.js"></script>
+        <script src="https://code.angularjs.org/1.3.0-rc.1/angular-route.min.js"></script>
+        <script src="script/app.min.js"></script>
+        <style>
+            .state-select {
+                width:300px;
+            }
+            .state-data{
+                width:300px;
+                height:400px;
+            }
+        </style>
+    </head>
+    <body>
+            <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                      <!-- Brand and toggle get grouped for better mobile display -->
+                      <div class="navbar-header">
+                       
+                        <a class="navbar-brand" href="#">State Statistics</a>
+                      </div>
+                  
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+                      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                          <li class="active"><a href="#/">Home<span class="sr-only">(current)</span></a></li>
+                          <li><a href="#/statistics">Statistics</a></li>     
+                        </ul>
+                        
+                      </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                  </nav>
+        <div class="container">
+            <div ng-view></div>
+        </div>
+    </body>
+</html>
