@@ -1,0 +1,42 @@
+
+<div class="col-row">
+    <div class="col-sm-12">
+        <h1>Welcome to the State Statistics Page.</h1>
+        <h4>Select a state from the first box or filter first using the textbox. The statistics will be displayed in the center. </h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <label>State:</label>
+    </div>
+    <div class="col-sm-4">
+        <label>Data:</label>
+    </div>
+    <div class="col-sm-4">
+            <label>Filter:</label> <input type="text" ng-model="typeaheadtext" ng-change="typeAhead()"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <select class="state-select" multiple="false" ng-model="selection1" ng-options="state as state.state for state in states.data" ng-click="stateDetails(selection1)" ng-dblclick="clearSelection()"></select>
+    </div>
+    <div class="col-sm-4">
+<textarea class="state-data">
+State: {{ selected[0].state }}
+State Population: {{ selected[0].population }}
+Number of Counties: {{ selected[0].counties }}
+County Population Total: {{ countyTotal }}
+Accurate Population: {{ countyTotalAccurate }}
+
+Counties: 
+{{ selectedCounties.join("") }}
+</textarea>
+    </div>
+    <div class="col-sm-4">
+        <select class="state-select" multiple="false" ng-model="selection2" ng-options="state as state.state for state in states2" ng-click="stateDetails(selection2)" ng-dblclick="clearSelection()"></select>
+    </div>
+</div>
+    
+    
+    
+    
