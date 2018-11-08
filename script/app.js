@@ -44,6 +44,10 @@ myApp.controller('statisticsController', ['$scope', '$log', '$filter', '$http', 
 
     $scope.stateDetails = function(selectedValue){
         $scope.selected = selectedValue; //set the current selection (this handles both boxes)
+        //this keeps the selection of both boxes in sync
+        $scope.selection1 = selectedValue;
+        $scope.selection2 = selectedValue;
+        console.log($scope.selection2)
         //reset the values of the county totals
         $scope.countyTotal = 0;
         $scope.countyTotalAccurate = false;
@@ -76,10 +80,8 @@ myApp.controller('statisticsController', ['$scope', '$log', '$filter', '$http', 
         if(selectedBox==='selection2'){
             $scope.selection2 = {};
         }
-        //if($scope.selection1 === {} && $scope.selection2 === {}){
-        //}
-
+        if($scope.selection1 === {} && $scope.selection2 === {}){
+        }
     }
-}]);
 
-    
+}]);
