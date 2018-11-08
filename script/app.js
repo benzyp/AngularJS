@@ -47,7 +47,7 @@ myApp.controller('statisticsController', ['$scope', '$log', '$filter', '$http', 
         //this keeps the selection of both boxes in sync
         $scope.selection1 = selectedValue;
         $scope.selection2 = selectedValue;
-        console.log($scope.selection2)
+        //console.log($scope.selection2)
         //reset the values of the county totals
         $scope.countyTotal = 0;
         $scope.countyTotalAccurate = false;
