@@ -18,7 +18,7 @@
 </div>
 <div class="row">
     <div class="col-sm-4">
-        <select class="state-select" multiple="false" ng-model="selection1" ng-options="state as state.state for state in states.data" ng-change="stateDetails(selection1)" ng-dblclick="clearSelection('selection1')"></select>
+        <select class="state-select" multiple="false" ng-model="selected" ng-options="state as state.state for state in states.data" ng-change="stateDetails(selected)" ng-dblclick="clearSelection()"></select>
     </div>
     <div class="col-sm-4">
 <textarea class="state-data">
@@ -33,6 +33,6 @@ Counties:
 </textarea>
     </div>
     <div class="col-sm-4">
-        <select class="state-select" multiple="false" ng-model="selection2" ng-options="state as state.state for state in states2" ng-change="stateDetails(selection2)" ng-dblclick="clearSelection('selection2')"></select>
+        <select class="state-select" multiple="false" ng-model="selected" ng-options="state as state.state for state in states2" ng-change="stateDetails(selected)" ng-dblclick="clearSelection()"></select>
     </div>
 </div>
